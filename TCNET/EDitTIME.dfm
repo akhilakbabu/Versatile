@@ -1,0 +1,407 @@
+object AllotDlg: TAllotDlg
+  Left = 23
+  Top = 138
+  HelpContext = 87
+  Caption = 'Change Times'
+  ClientHeight = 414
+  ClientWidth = 543
+  Color = clBtnFace
+  Constraints.MinHeight = 390
+  Constraints.MinWidth = 530
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -10
+  Font.Name = 'MS Sans Serif'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  Position = poScreenCenter
+  ShowHint = True
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pgcTimeSlot: TPageControl
+    Left = 0
+    Top = 0
+    Width = 543
+    Height = 380
+    Hint = 'Assign selected days to this group'
+    Margins.Bottom = 12
+    ActivePage = TabSheet1
+    Align = alClient
+    MultiLine = True
+    TabOrder = 0
+    TabPosition = tpBottom
+    object TabSheet1: TTabSheet
+      Caption = 'Mai&n'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      DesignSize = (
+        535
+        354)
+      object Label44: TLabel
+        Left = 425
+        Top = 60
+        Width = 87
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = '&Change for day'
+        FocusControl = ComboBox1
+        ExplicitLeft = 405
+      end
+      object Label57: TLabel
+        Left = 373
+        Top = 81
+        Width = 47
+        Height = 13
+        Anchors = [akTop, akRight]
+        Caption = 'All Days'
+        ExplicitLeft = 353
+      end
+      object Label62: TLabel
+        Left = 6
+        Top = 41
+        Width = 113
+        Height = 13
+        Caption = 'Set &Time Allotments'
+        FocusControl = grdTimeSlot
+      end
+      object grdTimeSlot: TStringGrid
+        Left = 5
+        Top = 84
+        Width = 354
+        Height = 262
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        ColCount = 6
+        DefaultColWidth = 60
+        DefaultRowHeight = 18
+        RowCount = 8
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -10
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goDrawFocusSelected, goColSizing, goEditing, goTabs, goThumbTracking]
+        ParentFont = False
+        PopupMenu = pmnTimeSlot
+        TabOrder = 0
+        OnKeyPress = FilterEntryData
+        OnMouseUp = SetGridSelection
+        OnSelectCell = grdTimeSlotSelectCell
+        RowHeights = (
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18)
+      end
+      object ComboBox1: TComboBox
+        Left = 427
+        Top = 78
+        Width = 100
+        Height = 21
+        Hint = 'Select the day group'
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        DropDownCount = 10
+        ItemHeight = 0
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        OnChange = RefreshTimeSlots
+      end
+      object Memo1: TMemo
+        Left = 361
+        Top = 123
+        Width = 166
+        Height = 189
+        Hint = 'Shows year and day groups with common time allotments'
+        Anchors = [akTop, akRight, akBottom]
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        Lines.Strings = (
+          'Memo1')
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 2
+      end
+      object SlotUnits1: TRadioGroup
+        Left = 192
+        Top = 5
+        Width = 315
+        Height = 41
+        Caption = 'Units for Time Slots'
+        Columns = 4
+        Items.Strings = (
+          '&Minutes'
+          '&Hours'
+          '&Periods'
+          '&Units')
+        TabOrder = 3
+        OnClick = SlotUnits1Click
+      end
+      object update: TBitBtn
+        Left = 396
+        Top = 320
+        Width = 90
+        Height = 25
+        Hint = 'Update time allotments'
+        Anchors = [akRight, akBottom]
+        Caption = '&Set Times'
+        Default = True
+        TabOrder = 4
+        OnClick = SetTimeSlots
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000000000000000000000000
+          8000008000000080800080000000800080008080000080808000C0C0C0000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          3333333333333333333333330000333333333333333333333333F33333333333
+          00003333344333333333333333377F3333333333000033334224333333333333
+          337337F3333333330000333422224333333333333733337F3333333300003342
+          222224333333333373333337F3333333000034222A22224333333337F337F333
+          7F33333300003222A3A2224333333337F3737F337F33333300003A2A333A2224
+          33333337F73337F337F33333000033A33333A222433333337333337F337F3333
+          0000333333333A222433333333333337F337F33300003333333333A222433333
+          333333337F337F33000033333333333A222433333333333337F337F300003333
+          33333333A222433333333333337F337F00003333333333333A22433333333333
+          3337F37F000033333333333333A223333333333333337F730000333333333333
+          333A333333333333333337330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object cmbType: TComboBox
+        Left = 64
+        Top = 280
+        Width = 145
+        Height = 21
+        ItemHeight = 13
+        TabOrder = 5
+        Text = 'cmbType'
+        Visible = False
+        OnChange = cmbTypeChange
+        OnExit = cmbTypeExit
+        Items.Strings = (
+          'Teaching'
+          'Break'
+          'Other')
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = '&Group Days'
+      ImageIndex = 2
+      OnExit = TabSheet3Exit
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object Label1: TLabel
+        Left = 9
+        Top = 5
+        Width = 281
+        Height = 13
+        Caption = 'Set groups of days with the same time allotments:'
+      end
+      object Label6: TLabel
+        Left = 34
+        Top = 153
+        Width = 61
+        Height = 13
+        Caption = 'Day G&roup'
+      end
+      object Label58: TLabel
+        Left = 120
+        Top = 153
+        Width = 126
+        Height = 13
+        Caption = 'Number of groups set:'
+      end
+      object Label59: TLabel
+        Left = 250
+        Top = 153
+        Width = 8
+        Height = 13
+        Caption = '1'
+      end
+      object BitBtn4: TBitBtn
+        Left = 34
+        Top = 218
+        Width = 100
+        Height = 25
+        Hint = 'Time allotments the same for all days'
+        Caption = '&All Same'
+        TabOrder = 0
+        OnClick = BitBtn4Click
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333444444
+          33333333333F8888883F33330000324334222222443333388F3833333388F333
+          000032244222222222433338F8833FFFFF338F3300003222222AAAAA22243338
+          F333F88888F338F30000322222A33333A2224338F33F8333338F338F00003222
+          223333333A224338F33833333338F38F00003222222333333A444338FFFF8F33
+          3338888300003AAAAAAA33333333333888888833333333330000333333333333
+          333333333333333333FFFFFF000033333333333344444433FFFF333333888888
+          00003A444333333A22222438888F333338F3333800003A2243333333A2222438
+          F38F333333833338000033A224333334422224338338FFFFF8833338000033A2
+          22444442222224338F3388888333FF380000333A2222222222AA243338FF3333
+          33FF88F800003333AA222222AA33A3333388FFFFFF8833830000333333AAAAAA
+          3333333333338888883333330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+      object BitBtn5: TBitBtn
+        Left = 145
+        Top = 218
+        Width = 100
+        Height = 25
+        Hint = 'Time allotments different for each day'
+        Caption = 'All &Different'
+        TabOrder = 1
+        OnClick = BitBtn5Click
+        Glyph.Data = {
+          DE010000424DDE01000000000000760000002800000024000000120000000100
+          0400000000006801000000000000000000001000000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333444444
+          33333333333F8888883F33330000324334222222443333388F3833333388F333
+          000032244222222222433338F8833FFFFF338F3300003222222AAAAA22243338
+          F333F88888F338F30000322222A33333A2224338F33F8333338F338F00003222
+          223333333A224338F33833333338F38F00003222222333333A444338FFFF8F33
+          3338888300003AAAAAAA33333333333888888833333333330000333333333333
+          333333333333333333FFFFFF000033333333333344444433FFFF333333888888
+          00003A444333333A22222438888F333338F3333800003A2243333333A2222438
+          F38F333333833338000033A224333334422224338338FFFFF8833338000033A2
+          22444442222224338F3388888333FF380000333A2222222222AA243338FF3333
+          33FF88F800003333AA222222AA33A3333388FFFFFF8833830000333333AAAAAA
+          3333333333338888883333330000333333333333333333333333333333333333
+          0000}
+        NumGlyphs = 2
+      end
+    end
+  end
+  object pnlButtons: TPanel
+    Left = 0
+    Top = 380
+    Width = 543
+    Height = 34
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    DesignSize = (
+      543
+      34)
+    object finish: TBitBtn
+      Left = 377
+      Top = 4
+      Width = 75
+      Height = 25
+      Hint = 'Exit from dialogue'
+      Anchors = [akRight, akBottom]
+      Cancel = True
+      Caption = 'C&lose'
+      ModalResult = 2
+      TabOrder = 0
+      Glyph.Data = {
+        BE060000424DBE06000000000000360400002800000024000000120000000100
+        0800000000008802000000000000000000000001000000000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000C0DCC000F0CA
+        A600000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000F0FBFF00A4A0A000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00030404040406
+        0303030303040404040303030303FFFFFFFF030303030303FFFFFFFF03030303
+        FAFAFA0403030303030302FA040303030303F8F80303FF0303030303F8F803FF
+        030303030302FA0406030303030302FA0403030303030303F803FF0303030303
+        03F803FF030303030302FA02040303030306FA060603030303030303F80303FF
+        03030303F803FF03030303030303FAFA040603030602FA040303030303030303
+        03F803FF030303F80303FF0303030303030306FAFA04040602FA040603030303
+        0303030303F80303FFFFF80303FF03030303030303030302FAFA020202040603
+        03030303030303030303F80303030303FF030303030303030303030306FAFAFA
+        020206040603030303030303030303F803030303FFF8FFFF0303030304040404
+        0606FAFA040306FA04030303030303F8FFFFFFF8F80303FF03F803FF03030303
+        06FAFA020406FA02040306FA04030303030303F8F80303FFF80303FF03F803FF
+        03030303030306FA0204FAFA040402FA040303030303030303F80303FF0303FF
+        FFF803FF0303030303030303FA02FAFA02FAFA0403030303030303030303F803
+        030303030303FF030303030303030303030202FAFAFA04030303030303030303
+        030303F80303030303FF0303030303030303030303030202FA04030303030303
+        0303030303030303F8030303FF0303030303030303030303030404FA04030303
+        03030303030303030303030303F803FF0303030303030303030303030306FA02
+        04030303030303030303030303030303F80303FF030303030303030303030303
+        0306FAFA04030303030303030303030303030303F80303FF0303030303030303
+        03030303030306060603030303030303030303030303030303F8F8F803030303
+        0303}
+      NumGlyphs = 2
+    end
+    object BitBtn1: TBitBtn
+      Left = 460
+      Top = 4
+      Width = 75
+      Height = 25
+      Hint = 'How do I ...'
+      Anchors = [akRight, akBottom]
+      TabOrder = 1
+      Kind = bkHelp
+    end
+  end
+  object pmnTimeSlot: TPopupMenu
+    Left = 240
+    Top = 56
+    object popDelete: TMenuItem
+      Caption = 'Delete'
+      OnClick = DeleteTimeSlot
+    end
+    object Insert1: TMenuItem
+      Caption = 'Insert'
+      OnClick = InsertTimeSlot
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object SaveToFile1: TMenuItem
+      Caption = 'Save To File'
+      OnClick = btnSaveToFileClick
+    end
+    object LoadFromFile1: TMenuItem
+      Caption = 'Load From File'
+      OnClick = btnLoadFromFileClick
+    end
+  end
+end

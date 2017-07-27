@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{e3d9cfb1-10aa-4d7e-9f7d-5ef21d69a74a}</ProjectGuid>
+    <MainSource>Tc6NET.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>Tc6NET.exe</DCC_DependencyCheckOutputName>
+    <DCC_UsePackage>vcl;rtl;vclx;vclactnband;dbrtl;vcldb;vcldbx;bdertl;dsnap;dsnapcon;teeUI;teedb;tee;adortl;vclib;ibxpress;dbxcds;dbexpress;DbxCommonDriver;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;IntrawebDB_90_100;Intraweb_90_100;VclSmp;vclie;websnap;webdsnap;inetdbbde;inetdbxpress;soaprtl;Rave75VCL</DCC_UsePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
+    <DCC_PentiumSafeDivide>True</DCC_PentiumSafeDivide>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+    <DCC_UnitSearchPath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML</DCC_UnitSearchPath>
+    <DCC_ResourcePath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML</DCC_ResourcePath>
+    <DCC_ObjPath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML</DCC_ObjPath>
+    <DCC_IncludePath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML</DCC_IncludePath>
+    <DCC_RangeChecking>True</DCC_RangeChecking>
+    <DCC_AssertionsAtRuntime>False</DCC_AssertionsAtRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>RELEASE</DCC_Define>
+    <DCC_UnitSearchPath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\Abbrevia\Source;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\TMSCommon;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML;E:\3rdParty\Components-master\EHS;E:\3rdParty\Components-master\Common;E:\3rdParty\Components-master\Abbrevia\Source;E:\3rdParty\Components-master\NiceGrid;E:\3rdParty\Components-master\TMSCommon;E:\3rdParty\Components-master\RBuilder\Lib;E:\3rdParty\Components-master\RBuilder\Source;E:\3rdParty\Components-master\OXML</DCC_UnitSearchPath>
+    <DCC_ResourcePath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\Abbrevia\Source;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\TMSCommon;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML;E:\3rdParty\Components-master\EHS;E:\3rdParty\Components-master\Common;E:\3rdParty\Components-master\Abbrevia\Source;E:\3rdParty\Components-master\NiceGrid;E:\3rdParty\Components-master\TMSCommon;E:\3rdParty\Components-master\RBuilder\Lib;E:\3rdParty\Components-master\RBuilder\Source;E:\3rdParty\Components-master\OXML</DCC_ResourcePath>
+    <DCC_ObjPath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\Abbrevia\Source;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\TMSCommon;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML;E:\3rdParty\Components-master\EHS;E:\3rdParty\Components-master\Common;E:\3rdParty\Components-master\Abbrevia\Source;E:\3rdParty\Components-master\NiceGrid;E:\3rdParty\Components-master\TMSCommon;E:\3rdParty\Components-master\RBuilder\Lib;E:\3rdParty\Components-master\RBuilder\Source;E:\3rdParty\Components-master\OXML</DCC_ObjPath>
+    <DCC_IncludePath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\Abbrevia\Source;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\TMSCommon;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source;D:\amig\Components\OXML;E:\3rdParty\Components-master\EHS;E:\3rdParty\Components-master\Common;E:\3rdParty\Components-master\Abbrevia\Source;E:\3rdParty\Components-master\NiceGrid;E:\3rdParty\Components-master\TMSCommon;E:\3rdParty\Components-master\RBuilder\Lib;E:\3rdParty\Components-master\RBuilder\Source;E:\3rdParty\Components-master\OXML</DCC_IncludePath>
+    <DCC_DcuOutput>E:\Delphi project\DOC\TCNET</DCC_DcuOutput>
+    <DCC_ObjOutput>E:\Delphi project\DOC\TCNET</DCC_ObjOutput>
+    <DCC_HppOutput>E:\Delphi project\DOC\TCNET</DCC_HppOutput>
+    <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+    <DCC_WriteableConstants>True</DCC_WriteableConstants>
+    <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
+    <DCC_RangeChecking>True</DCC_RangeChecking>
+    <DCC_PentiumSafeDivide>True</DCC_PentiumSafeDivide>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_Optimize>False</DCC_Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_AssertionsAtRuntime>False</DCC_AssertionsAtRuntime>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
+    <DCC_RangeChecking>True</DCC_RangeChecking>
+    <DCC_PentiumSafeDivide>True</DCC_PentiumSafeDivide>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_UnitSearchPath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source</DCC_UnitSearchPath>
+    <DCC_ResourcePath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source</DCC_ResourcePath>
+    <DCC_ObjPath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source</DCC_ObjPath>
+    <DCC_IncludePath>D:\AMIG\Components\EHS;D:\AMIG\Source\Common;D:\AMIG\Components\NiceGrid;D:\AMIG\Components\Abbrevia\Source;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Lib;C:\Program Files (x86)\CodeGear\RAD Studio\5.0\RBuilder\Source</DCC_IncludePath>
+    <DCC_Define>TRIAL</DCC_Define>
+    <DCC_ExeOutput>Trial</DCC_ExeOutput>
+    <DCC_Description>Trial Version</DCC_Description>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters><Parameters Name="DebugSourceDirs">C:\AMIG\Components\TMSCommon\</Parameters><Parameters Name="RunParams">/DevMode</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">6</VersionInfo><VersionInfo Name="MinorVer">5</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">18</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">3081</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">AMIG SYSTEMS</VersionInfoKeys><VersionInfoKeys Name="FileDescription">School Timetabling software</VersionInfoKeys><VersionInfoKeys Name="FileVersion">6.5.0.18</VersionInfoKeys><VersionInfoKeys Name="InternalName">TC6NET.exe</VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename">TC6NET.exe</VersionInfoKeys><VersionInfoKeys Name="ProductName">NETWORK TIME CHART</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">6.5</VersionInfoKeys><VersionInfoKeys Name="Comments">School Timetabling software</VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">Tc6NET.dpr</Source></Source><Excluded_Packages>
+      
+      
+      
+      
+      
+      
+      
+      
+      <Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+    </Excluded_Packages></Delphi.Personality><ModelSupport>False</ModelSupport></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>SetUpdateDate</PreBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="Tc6NET.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="..\Common\BlockTeachers.pas">
+      <Form>FrmBlockTeachers</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\BulkRenameSubjects.pas">
+      <Form>FrmBulkRenameSubjects</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\CASES21ExportDataView.pas">
+      <Form>FrmCASES21ExportDataView</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\CASES21ImportOptions.pas">
+      <Form>FrmCASES21ImportOptions</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\CreateHealthCondition.pas">
+      <Form>FrmAddHealthCondition</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\DCPrijndael.pas" />
+    <DCCReference Include="..\Common\DCPsha1.pas" />
+    <DCCReference Include="..\Common\DCPsha256.pas" />
+    <DCCReference Include="..\Common\EditHealthCondition.pas">
+      <Form>FrmEditHealthCondition</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\EditTag.pas">
+      <Form>FrmEditTag</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\ExportToCASES21.pas" />
+    <DCCReference Include="..\Common\ExportToTASS.pas">
+      <Form>FrmExportTASS</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\GlobalToTcAndTcextra.pas" />
+    <DCCReference Include="..\Common\HealthCondition.pas">
+      <Form>FrmHealthCondition</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\ImportCases21.pas">
+      <Form>FrmImportCases21</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\LoadProgress.pas">
+      <Form>FrmLoadProgress</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\MRUList.pas" />
+    <DCCReference Include="..\Common\NewFeatures.pas">
+      <Form>FrmNewFeatures</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\RemoveTimetable.pas">
+      <Form>FrmRemoveTimetable</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\SearchBlocks.pas">
+      <Form>FrmSearchBlocks</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\TeacherLoadOnWS.pas">
+      <Form>FrmTeacherLoadOnWS</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\TimeChartGlobals.pas" />
+    <DCCReference Include="..\Common\TimetableStatistics.pas">
+      <Form>FrmTimetableStatistics</Form>
+    </DCCReference>
+    <DCCReference Include="..\Common\uAMGClassSubject.pas" />
+    <DCCReference Include="..\Common\uAMGComment.pas" />
+    <DCCReference Include="..\Common\uAMGConst.pas" />
+    <DCCReference Include="..\Common\uAMGFaculty.pas" />
+    <DCCReference Include="..\Common\uAMGFamily.pas" />
+    <DCCReference Include="..\Common\uAMGHealthCondition.pas" />
+    <DCCReference Include="..\Common\uAMGItem.pas" />
+    <DCCReference Include="..\Common\uAMGStudent.pas" />
+    <DCCReference Include="..\Common\uAMGSubject.pas" />
+    <DCCReference Include="..\Common\uAMGTeacher.pas" />
+    <DCCReference Include="..\Common\uAMGTimeTable.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.DISPLAY.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.STUDENTS.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.TEACHERS.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.TTABLE.CLS.PAS" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.TTABLE.LAB.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.TTABLE.NAM.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.TTABLE.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.TTABLE.TTW.PAS" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.USERS.pas" />
+    <DCCReference Include="..\XMLDatabaseRoutines\XML.UTILS.pas" />
+    <DCCReference Include="ADDCLASS.PAS">
+      <Form>AddclassDlg</Form>
+    </DCCReference>
+    <DCCReference Include="ADDRCODE.PAS">
+      <Form>addrcodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="ADDSCODE.PAS">
+      <Form>addscodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="ADDSTUD.PAS">
+      <Form>addstuddlg</Form>
+    </DCCReference>
+    <DCCReference Include="ADDTCODE.PAS">
+      <Form>addtcodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="ADDUSER.PAS">
+      <Form>AddNewUserDlg</Form>
+    </DCCReference>
+    <DCCReference Include="AllTargetTimes.pas">
+      <Form>FrmShowAllTargetTimes</Form>
+    </DCCReference>
+    <DCCReference Include="ALTER.PAS">
+      <Form>AlterDlg</Form>
+    </DCCReference>
+    <DCCReference Include="AUTOALOC.PAS">
+      <Form>AutoAllocDlg</Form>
+    </DCCReference>
+    <DCCReference Include="Autoload.pas">
+      <Form>autoloaddlg</Form>
+    </DCCReference>
+    <DCCReference Include="BCKUPDLG.PAS">
+      <Form>BackupDataDlg</Form>
+    </DCCReference>
+    <DCCReference Include="BCLSHDLG.PAS">
+      <Form>blockclashesdlg</Form>
+    </DCCReference>
+    <DCCReference Include="blcktool.pas">
+      <Form>blocktoolbarwin</Form>
+    </DCCReference>
+    <DCCReference Include="BLKCLASH.PAS">
+      <Form>BlockClashes</Form>
+    </DCCReference>
+    <DCCReference Include="BLOCK1.PAS">
+      <Form>Blockwin</Form>
+    </DCCReference>
+    <DCCReference Include="BOXOP.PAS">
+      <Form>BoxDlg</Form>
+    </DCCReference>
+    <DCCReference Include="BUILD.PAS">
+      <Form>BuildDlg</Form>
+    </DCCReference>
+    <DCCReference Include="cfggrpmn.pas">
+      <Form>ConfigureGroupMenudlg</Form>
+    </DCCReference>
+    <DCCReference Include="CHELP.PAS">
+      <Form>ClashHelpDlg</Form>
+    </DCCReference>
+    <DCCReference Include="CLASHHLP.PAS">
+      <Form>ClashHelp</Form>
+    </DCCReference>
+    <DCCReference Include="ClassDefs.pas" />
+    <DCCReference Include="CLMATRIX.PAS">
+      <Form>cmatwin</Form>
+    </DCCReference>
+    <DCCReference Include="CLMATSEL.PAS">
+      <Form>cmatsel</Form>
+    </DCCReference>
+    <DCCReference Include="cnfgblck.pas">
+      <Form>Configureblocks</Form>
+    </DCCReference>
+    <DCCReference Include="CNFGDAY.PAS">
+      <Form>configdaydlg</Form>
+    </DCCReference>
+    <DCCReference Include="CNFGLEV.PAS">
+      <Form>ConfigureLevels</Form>
+    </DCCReference>
+    <DCCReference Include="CNFGYEAR.PAS">
+      <Form>ConfigYeardlg</Form>
+    </DCCReference>
+    <DCCReference Include="CODELEN.PAS">
+      <Form>codelendlg</Form>
+    </DCCReference>
+    <DCCReference Include="CodeView.pas">
+      <Form>ViewCodeDialog</Form>
+    </DCCReference>
+    <DCCReference Include="COPYBLCK.PAS">
+      <Form>CopyBlockDlg</Form>
+    </DCCReference>
+    <DCCReference Include="CopyBlockToTT.PAS">
+      <Form>FrmCopyBlockToTT</Form>
+    </DCCReference>
+    <DCCReference Include="CopyTT.PAS">
+      <Form>FrmCopyTT</Form>
+    </DCCReference>
+    <DCCReference Include="CREATE.PAS">
+      <Form>CreateDlg</Form>
+    </DCCReference>
+    <DCCReference Include="CustomOutput.pas" />
+    <DCCReference Include="DELCLASS.PAS">
+      <Form>DelclassDlg</Form>
+    </DCCReference>
+    <DCCReference Include="DELRCODE.PAS">
+      <Form>delrcodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="DELSCODE.PAS">
+      <Form>DelSCodeDlg</Form>
+    </DCCReference>
+    <DCCReference Include="DELSTUD.PAS">
+      <Form>delstuddlg</Form>
+    </DCCReference>
+    <DCCReference Include="DELTCODE.PAS">
+      <Form>deltcodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="Deluser.pas">
+      <Form>DeleteUserDlg</Form>
+    </DCCReference>
+    <DCCReference Include="DELYRSUB.PAS">
+      <Form>delyrsubdlg</Form>
+    </DCCReference>
+    <DCCReference Include="DlgCommon.pas" />
+    <DCCReference Include="dmTC.pas">
+      <Form>DM</Form>
+      <DesignClass>TDataModule</DesignClass>
+    </DCCReference>
+    <DCCReference Include="EDCLASS.PAS">
+      <Form>edclassdlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDCUSTOM.PAS">
+      <Form>EditCustomInfo</Form>
+    </DCCReference>
+    <DCCReference Include="EDFAC2.PAS">
+      <Form>EditFac2</Form>
+    </DCCReference>
+    <DCCReference Include="EDHOUSE.PAS">
+      <Form>edhousedlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDitTIME.PAS">
+      <Form>AllotDlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDPASSWD.PAS">
+      <Form>edpassworddlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDRCODE.PAS">
+      <Form>edrcodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDSCODE.PAS">
+      <Form>edscodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDSTUD.PAS">
+      <Form>edstuddlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDTCODE.PAS">
+      <Form>edtcodedlg</Form>
+    </DCCReference>
+    <DCCReference Include="EDUSER.PAS">
+      <Form>EditUserDlg</Form>
+    </DCCReference>
+    <DCCReference Include="ENTRY.PAS">
+      <Form>EntryDlg</Form>
+    </DCCReference>
+    <DCCReference Include="EXSUB.PAS">
+      <Form>ExcludeSubDlg</Form>
+    </DCCReference>
+    <DCCReference Include="FacWnd.pas">
+      <Form>FacultyWindow</Form>
+    </DCCReference>
+    <DCCReference Include="FamilyClash.pas">
+      <Form>FrmFamilyClash</Form>
+    </DCCReference>
+    <DCCReference Include="FINDSTUD.PAS">
+      <Form>FindStudent</Form>
+    </DCCReference>
+    <DCCReference Include="fixsub.pas">
+      <Form>FixSubDlg</Form>
+    </DCCReference>
+    <DCCReference Include="FlexiPaste.pas">
+      <Form>FlexiPasteDlg</Form>
+    </DCCReference>
+    <DCCReference Include="FlexiPasteQuiz.pas">
+      <Form>FlexiPasteQueryDlg</Form>
+    </DCCReference>
+    <DCCReference Include="FNDRODLG.PAS">
+      <Form>findroomdlg</Form>
+    </DCCReference>
+    <DCCReference Include="FNDSTDLG.PAS">
+      <Form>findstudentdlg</Form>
+    </DCCReference>
+    <DCCReference Include="FNDTEDLG.PAS">
+      <Form>findteacherdlg</Form>
+    </DCCReference>
+    <DCCReference Include="gentool.pas">
+      <Form>gentoolbarwin</Form>
+    </DCCReference>
+    <DCCReference Include="GROUPSEL.PAS">
+      <Form>groupseldlg</Form>
+    </DCCReference>
+    <DCCReference Include="GRPOFTE.PAS">
+      <Form>GroupofTeachers</Form>
+    </DCCReference>
+    <DCCReference Include="GRPTEDLG.PAS">
+      <Form>Groupofteachersdlg</Form>
+    </DCCReference>
+    <DCCReference Include="GTSPRPSS.PAS">
+      <Form>getSuperPasswordDlg</Form>
+    </DCCReference>
+    <DCCReference Include="hints.pas">
+      <Form>Hintsdlg</Form>
+    </DCCReference>
+    <DCCReference Include="HouseWnd.pas">
+      <Form>HouseWindow</Form>
+    </DCCReference>
+    <DCCReference Include="InUse.pas">
+      <Form>SpecifyCurTtableDlg</Form>
+    </DCCReference>
+    <DCCReference Include="keygen\Unit1.pas">
+      <Form>Form1</Form>
+    </DCCReference>
+    <DCCReference Include="LENCLASS.PAS">
+      <Form>lenClassDlg</Form>
+    </DCCReference>
+    <DCCReference Include="LINKSUB.PAS">
+      <Form>LinkSubDlg</Form>
+    </DCCReference>
+    <DCCReference Include="ListTagNames.pas">
+      <Form>FrmListTagNames</Form>
+    </DCCReference>
+    <DCCReference Include="LOGONDLG.PAS">
+      <Form>LoggingonDlg</Form>
+    </DCCReference>
+    <DCCReference Include="MAIN.PAS">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="MANCLASH.PAS">
+      <Form>ManClashDlg</Form>
+    </DCCReference>
+    <DCCReference Include="MARGINS.PAS">
+      <Form>pmargins</Form>
+    </DCCReference>
+    <DCCReference Include="MOVESUB.PAS">
+      <Form>MoveSubDlg</Form>
+    </DCCReference>
+    <DCCReference Include="OpenFile.pas">
+      <Form>FrmOpenFile</Form>
+    </DCCReference>
+    <DCCReference Include="PREFER.PAS">
+      <Form>prefdlg</Form>
+    </DCCReference>
+    <DCCReference Include="PrintPreviewForm.pas">
+      <Form>PrntPreviewForm</Form>
+    </DCCReference>
+    <DCCReference Include="PROMODLG.PAS">
+      <Form>promotestudentdlg</Form>
+    </DCCReference>
+    <DCCReference Include="REPYRSUB.PAS">
+      <Form>repysdlg</Form>
+    </DCCReference>
+    <DCCReference Include="RFREEDLG.PAS">
+      <Form>Roomsfreedlg</Form>
+    </DCCReference>
+    <DCCReference Include="ROCLASH.PAS">
+      <Form>RoomClashes</Form>
+    </DCCReference>
+    <DCCReference Include="rocldlg.pas">
+      <Form>roomClashdlg</Form>
+    </DCCReference>
+    <DCCReference Include="ROFREE.PAS">
+      <Form>RoomsFree</Form>
+    </DCCReference>
+    <DCCReference Include="RollClassWnd.pas">
+      <Form>RollClassWindow</Form>
+    </DCCReference>
+    <DCCReference Include="ROOMTT.PAS">
+      <Form>RoTtable</Form>
+    </DCCReference>
+    <DCCReference Include="ROTTDLG.PAS">
+      <Form>RoomTTdlg</Form>
+    </DCCReference>
+    <DCCReference Include="RoWnd.pas">
+      <Form>RoWindow</Form>
+    </DCCReference>
+    <DCCReference Include="sbtsdlg.pas">
+      <Form>SubjectsByTimeSlotDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SEARCH.PAS">
+      <Form>SearchDlg</Form>
+    </DCCReference>
+    <DCCReference Include="segregat.pas">
+      <Form>SegregateDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SETBLOCK.PAS">
+      <Form>SetBlocksDlg</Form>
+    </DCCReference>
+    <DCCReference Include="showclas.pas">
+      <Form>ClassesShowDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SHOWUSER.PAS">
+      <Form>ShowUsersWin</Form>
+    </DCCReference>
+    <DCCReference Include="SOLVE.PAS">
+      <Form>SolveDlg</Form>
+    </DCCReference>
+    <DCCReference Include="sortgrp.pas">
+      <Form>SortGroupDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SPLITSUB.PAS">
+      <Form>SplitSubDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SplitSubjectsConvertor.pas">
+      <Form>FrmSplitSubjectConv</Form>
+    </DCCReference>
+    <DCCReference Include="STBARC.PAS" />
+    <DCCReference Include="StBlockClash.pas">
+      <Form>StClashWin</Form>
+    </DCCReference>
+    <DCCReference Include="STCLASH.PAS">
+      <Form>StClashHelpDlg</Form>
+    </DCCReference>
+    <DCCReference Include="Stcommon.pas" />
+    <DCCReference Include="STINDLG.PAS">
+      <Form>studentinputdlg</Form>
+    </DCCReference>
+    <DCCReference Include="STINPUT.PAS">
+      <Form>Stuinput</Form>
+    </DCCReference>
+    <DCCReference Include="StripRooms.pas">
+      <Form>StripRoomsDlg</Form>
+    </DCCReference>
+    <DCCReference Include="StudentClashes.pas">
+      <Form>FrmStudentClashes</Form>
+    </DCCReference>
+    <DCCReference Include="StudFree.pas">
+      <Form>StudFreeWin</Form>
+    </DCCReference>
+    <DCCReference Include="STUDLIST.PAS">
+      <Form>StudentListWin</Form>
+    </DCCReference>
+    <DCCReference Include="STUDTTAB.PAS">
+      <Form>STtable</Form>
+    </DCCReference>
+    <DCCReference Include="STULIDLG.PAS">
+      <Form>StudListDlg</Form>
+    </DCCReference>
+    <DCCReference Include="STUTTDLG.PAS">
+      <Form>Studttabledlg</Form>
+    </DCCReference>
+    <DCCReference Include="SUBBSDLG.PAS">
+      <Form>SubjectBySubjectDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SUBBYSLT.PAS">
+      <Form>SubByTimeSlotWin</Form>
+    </DCCReference>
+    <DCCReference Include="SUBBYSUB.PAS">
+      <Form>SubBySubjectWin</Form>
+    </DCCReference>
+    <DCCReference Include="SubClassSize.pas">
+      <Form>SetSubSizeDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SUBJCTTT.PAS">
+      <Form>SuTtable</Form>
+    </DCCReference>
+    <DCCReference Include="SubReportLen.pas">
+      <Form>SubReportLendlg</Form>
+    </DCCReference>
+    <DCCReference Include="SUBTIMES.PAS">
+      <Form>SubjectTimes</Form>
+    </DCCReference>
+    <DCCReference Include="SUBTTDLG.PAS">
+      <Form>SubjectTTdlg</Form>
+    </DCCReference>
+    <DCCReference Include="SUBYR.PAS">
+      <Form>Subyearwin</Form>
+    </DCCReference>
+    <DCCReference Include="SUTIMDLG.PAS">
+      <Form>SubjectTimesdlg</Form>
+    </DCCReference>
+    <DCCReference Include="SuWnd.pas">
+      <Form>SuWindow</Form>
+    </DCCReference>
+    <DCCReference Include="SWAPBLCK.PAS">
+      <Form>ExchangeBlockDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SWAPSUB.PAS">
+      <Form>SwapSubDlg</Form>
+    </DCCReference>
+    <DCCReference Include="SynergeticExport.pas">
+      <Form>FrmSynergeticExport</Form>
+    </DCCReference>
+    <DCCReference Include="Tagdlg.pas">
+      <Form>TagDialog</Form>
+    </DCCReference>
+    <DCCReference Include="TCGETDIR.PAS">
+      <Form>GetDirDlg</Form>
+    </DCCReference>
+    <DCCReference Include="TCINFO.PAS">
+      <Form>InfoWin</Form>
+    </DCCReference>
+    <DCCReference Include="TCLOAD.PAS">
+      <Form>About</Form>
+    </DCCReference>
+    <DCCReference Include="TCOMMON.PAS" />
+    <DCCReference Include="TCOMMON2.PAS" />
+    <DCCReference Include="tcommon5.pas" />
+    <DCCReference Include="Teacher.pas">
+      <Form>FrmTeacher</Form>
+    </DCCReference>
+    <DCCReference Include="TEACHTT.PAS">
+      <Form>TeTtable</Form>
+    </DCCReference>
+    <DCCReference Include="TECLASH.PAS">
+      <Form>TeacherClashes</Form>
+    </DCCReference>
+    <DCCReference Include="tecldlg.pas">
+      <Form>teacherclashdlg</Form>
+    </DCCReference>
+    <DCCReference Include="TEFREE.PAS">
+      <Form>TeachersFree</Form>
+    </DCCReference>
+    <DCCReference Include="TeList.pas">
+      <Form>TeListWin</Form>
+    </DCCReference>
+    <DCCReference Include="TeListSelect.pas">
+      <Form>TeListSelDlg</Form>
+    </DCCReference>
+    <DCCReference Include="TETIMDLG.PAS">
+      <Form>Teachertimesdlg</Form>
+    </DCCReference>
+    <DCCReference Include="TETIMES.PAS">
+      <Form>TeacherTimes</Form>
+    </DCCReference>
+    <DCCReference Include="TETTDLG.PAS">
+      <Form>TeacherTTdlg</Form>
+    </DCCReference>
+    <DCCReference Include="TeWnd.pas">
+      <Form>TeWindow</Form>
+    </DCCReference>
+    <DCCReference Include="TFREEDLG.PAS">
+      <Form>Teachersfreedlg</Form>
+    </DCCReference>
+    <DCCReference Include="TimesWnd.pas">
+      <Form>TimesWindow</Form>
+    </DCCReference>
+    <DCCReference Include="TrackChoices.pas">
+      <Form>TrackChoicesDlg</Form>
+    </DCCReference>
+    <DCCReference Include="TTABLE.PAS">
+      <Form>Ttablewin</Form>
+    </DCCReference>
+    <DCCReference Include="TTBCLASH.PAS">
+      <Form>ttclashDlg</Form>
+    </DCCReference>
+    <DCCReference Include="TTGOTO.PAS">
+      <Form>GotoDlg</Form>
+    </DCCReference>
+    <DCCReference Include="TTPRNSEL.PAS">
+      <Form>ttprintselectiondlg</Form>
+    </DCCReference>
+    <DCCReference Include="TTSIZE.PAS">
+      <Form>ttsizedlg</Form>
+    </DCCReference>
+    <DCCReference Include="tttoolbarwin.pas">
+      <Form>TtableToolbarWin</Form>
+    </DCCReference>
+    <DCCReference Include="TTundo.pas" />
+    <DCCReference Include="TTVERS.PAS">
+      <Form>VersionDlg</Form>
+    </DCCReference>
+    <DCCReference Include="VASSStudentChoicesExport.pas">
+      <Form>FrmVASSStudentChoicesExport</Form>
+    </DCCReference>
+    <DCCReference Include="VASSStudentExport.pas">
+      <Form>FrmVASSStudentExport</Form>
+    </DCCReference>
+    <DCCReference Include="WebTC.pas" />
+    <DCCReference Include="WebUpdate.pas">
+      <Form>WebUpdateDlg</Form>
+    </DCCReference>
+    <DCCReference Include="Worksheet.PAS">
+      <Form>Worksheetwin</Form>
+    </DCCReference>
+    <DCCReference Include="wsAlter.pas">
+      <Form>wsAlterDlg</Form>
+    </DCCReference>
+    <DCCReference Include="wsENTRY.PAS">
+      <Form>wsEntryDlg</Form>
+    </DCCReference>
+    <DCCReference Include="wsMultiple.PAS">
+      <Form>wsMultipleDlg</Form>
+    </DCCReference>
+    <DCCReference Include="wsTarget.PAS">
+      <Form>wsTargetDlg</Form>
+    </DCCReference>
+    <DCCReference Include="wsToolbarwin.pas">
+      <Form>WorkSheetToolbar</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>
